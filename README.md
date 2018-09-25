@@ -15,3 +15,16 @@ In general, you should be using symbolic links for everything, and using git sub
 To keep submodules at their proper versions, you could include something like git submodule update --init --recursive in your install.conf.yaml.
 
 To upgrade your submodules to their latest versions, you could periodically run git submodule update --init --remote.
+
+## Modifying script permissions
+To allow running a script, use the following `chmod` commmand with the path to the script file.
+
+```bash
+chmod +x ./path-to-script.sh
+```
+
+## Updating vscode extesion list
+Currently the vscode extension list is readonly. To update the `extensions.txt` file run the following command
+```bash
+code --list-extensions > ~/.dotfiles/vscode/extentions.txt
+```

@@ -17,9 +17,17 @@ echo "Installing desktop software"
 brew cask install github
 brew cask install flycut
 brew cask install spectacle
+brew cask install slack
+brew cask install licecap
 
+brew install zsh zsh-completions
 brew tap caskroom/fonts
 brew cask install font-fira-code
+
+# Optional software
+# brew cask install gimp
+# brew cask install skitch
+# brew cask install virtualbox
 
 # Remove outdated versions from the cellar.
 brew cleanup

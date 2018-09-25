@@ -1,0 +1,6 @@
+eamodio.gitlens
+EditorConfig.EditorConfig
+eg2.tslint
+ms-vsliveshare.vsliveshare
+ms-vsliveshare.vsliveshare-audio
+vscodevim.vim

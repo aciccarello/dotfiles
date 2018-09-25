@@ -6,6 +6,8 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'vim-airline/vim-airline'
+Plugin 'leafgarland/typescript-vim'
+Plugin 'tpope/vim-commentary'
 call vundle#end()
 filetype plugin indent on
 
@@ -19,3 +21,7 @@ filetype plugin indent on
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 " Put the rest of your .vimrc file here
+
+syntax on
+set number
+" autocmd FileType typescript setlocal commentstring=\\\\\ %s
