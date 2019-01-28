@@ -8,6 +8,7 @@ Plugin 'editorconfig/editorconfig-vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'tpope/vim-commentary'
+Plugin 'Quramy/tsuquyomi'
 call vundle#end()
 filetype plugin indent on
 

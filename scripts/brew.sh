@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# Install xcode
+# sudo xcode-select --install
+
 # Install command-line tools using Homebrew.
 
 echo "Updating brew and already installed software"
@@ -19,6 +22,7 @@ brew cask install flycut
 brew cask install spectacle
 brew cask install slack
 brew cask install licecap
+brew cask install krisp
 
 brew install zsh zsh-completions
 brew tap caskroom/fonts

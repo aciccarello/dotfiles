@@ -28,3 +28,15 @@ Currently the vscode extension list is readonly. To update the `extensions.txt` 
 ```bash
 code --list-extensions > ~/.dotfiles/vscode/extentions.txt
 ```
+
+## Additional Software
+This software should be installed manually.
+* [VS Code](https://code.visualstudio.com/Download)
+* [Microsoft Erogonomic Mouse](https://www.microsoft.com/accessories/en-id/d/natural-ergonomic-keyboard-4000)
+* [Docker Desktop](https://www.docker.com/products/docker-desktop)
+
+## Finding defaults from menus
+Print the defaults to two files before and after the change and compare the two files.
+```bash
+defaults read com.apple.dock > defaults.txt
+```

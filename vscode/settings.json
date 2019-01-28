@@ -5,7 +5,10 @@
     "files.autoSave": "onWindowChange",
     "vim.useSystemClipboard": true,
     "vim.statusBarColorControl": true,
-    "vim.statusBarColors.normal": ["#8FBCBB", "#434C5E"],
+    "vim.statusBarColors.normal": [
+        "#8FBCBB",
+        "#434C5E"
+    ],
     "vim.statusBarColors.insert": "#BF616A",
     "vim.statusBarColors.visual": "#B48EAD",
     "vim.statusBarColors.visualline": "#B48EAD",
@@ -14,5 +17,53 @@
     "files.associations": {
         ".dojorc": "json"
     },
-    "breadcrumbs.enabled": true
+    "breadcrumbs.enabled": true,
+    "workbench.colorCustomizations": {
+        "statusBar.background": "#8FBCBB",
+        "statusBar.noFolderBackground": "#8FBCBB",
+        "statusBar.debuggingBackground": "#8FBCBB",
+        "statusBar.foreground": "#434C5E"
+    },
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                ":wa"
+            ],
+            "commands": [
+                "workbench.action.files.saveAll"
+            ]
+        },
+        {
+            "before": [
+                ":copen"
+            ],
+            "commands": [
+                "workbench.actions.view.problems"
+            ]
+        }
+    ],
+    "vim.disableExtension": false,
+    "html.autoClosingTags": false,
+    "javascript.autoClosingTags": false,
+    "typescript.autoClosingTags": false,
+    "window.zoomLevel": 0,
+    "css.lint.validProperties": [
+        "composes"
+    ],
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "launch": {
+        "configurations": [
+            {
+                "type": "node",
+                "request": "launch",
+                "name": "Grunt test",
+                "program": "${workspaceFolder}/node_modules/grunt/bin/grunt",
+                "args": [
+                    "test"
+                ]
+            }
+        ]
+    },
+    "bracketPairColorizer.showHorizontalScopeLine": false,
+    "bracketPairColorizer.colorMode": "Independent"
 }

@@ -1,6 +1,10 @@
 eamodio.gitlens
 EditorConfig.EditorConfig
-eg2.tslint
+GitHub.vscode-pull-request-github
+ms-vscode.vscode-typescript-tslint-plugin
 ms-vsliveshare.vsliveshare
-ms-vsliveshare.vsliveshare-audio
+Orta.vscode-jest
+shinnn.alex
+travisthetechie.write-good-linter
 vscodevim.vim
+WallabyJs.quokka-vscode
