@@ -46,7 +46,7 @@
     "html.autoClosingTags": false,
     "javascript.autoClosingTags": false,
     "typescript.autoClosingTags": false,
-    "window.zoomLevel": 0,
+    "window.zoomLevel": 1,
     "css.lint.validProperties": [
         "composes"
     ],
@@ -61,9 +61,41 @@
                 "args": [
                     "test"
                 ]
+            },
+            {
+                "type": "node",
+                "name": "jest tests",
+                "request": "launch",
+                "args": [
+                    "--runInBand"
+                ],
+                "cwd": "${workspaceFolder}",
+                "console": "integratedTerminal",
+                "internalConsoleOptions": "neverOpen",
+                "program": "${workspaceFolder}/node_modules/jest/bin/jest"
+            },
+            {
+                "type": "node",
+                "name": "jest current file",
+                "request": "launch",
+                "args": [
+                    "--runInBand",
+                    "${relativeFile}",
+                    "${fileDirname}/${fileBasenameNoExtension}.spec${fileExtname}"
+                ],
+                "cwd": "${workspaceFolder}",
+                "console": "integratedTerminal",
+                "internalConsoleOptions": "neverOpen",
+                "program": "${workspaceFolder}/node_modules/jest/bin/jest"
             }
         ]
     },
     "bracketPairColorizer.showHorizontalScopeLine": false,
-    "bracketPairColorizer.colorMode": "Independent"
+    "bracketPairColorizer.colorMode": "Independent",
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
 }

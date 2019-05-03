@@ -1,8 +1,15 @@
 [user]
 	name = Anthony Ciccarello
-	email = aciccarello@users.noreply.github.com
+	email = aciccarello@sitepen.com
 [filter "lfs"]
 	process = git-lfs filter-process
 	required = true
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
+[credential]
+	helper = osxkeychain
+[diff]
+	tool = vimdiff
+[merge "npm-merge-driver"]
+	name = automatically merge npm lockfiles
+	driver = npx npm-merge-driver merge %A %O %B %P

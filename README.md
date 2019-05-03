@@ -34,6 +34,7 @@ This software should be installed manually.
 * [VS Code](https://code.visualstudio.com/Download)
 * [Microsoft Erogonomic Mouse](https://www.microsoft.com/accessories/en-id/d/natural-ergonomic-keyboard-4000)
 * [Docker Desktop](https://www.docker.com/products/docker-desktop)
+* [Logitech Unifying Software](https://support.logitech.com/en_us/software/unifying)
 
 ## Finding defaults from menus
 Print the defaults to two files before and after the change and compare the two files.

@@ -17,15 +17,17 @@ brew install grep
 brew install openssh
 
 echo "Installing desktop software"
+brew cask install chrome
+brew cask install homebrew/cask-versions/firefox-developer-edition
 brew cask install github
 brew cask install flycut
 brew cask install spectacle
 brew cask install slack
 brew cask install licecap
 brew cask install krisp
+brew cask install rescuetime
 
 brew install zsh zsh-completions
-brew tap caskroom/fonts
 brew cask install font-fira-code
 
 # Optional software
