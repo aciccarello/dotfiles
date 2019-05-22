@@ -11,6 +11,7 @@
     ~/.zshrc: zshrc
     ~/.gitconfig: git/.gitconfig
     ~/.vimrc: vim/.vimrc
+    ~/.editorconfig: .editorconfig
     # VS Code
     ~/Library/Application Support/Code/User/settings.json: vscode/settings.json
     ~/Library/Application Support/Code/User/keybindings.json: vscode/keybindings.json
