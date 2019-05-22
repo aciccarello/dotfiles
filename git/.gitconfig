@@ -13,3 +13,13 @@
 [merge "npm-merge-driver"]
 	name = automatically merge npm lockfiles
 	driver = npx npm-merge-driver merge %A %O %B %P
+[alias]
+    s = status --short
+    br = branch -v
+    cane = commit --amend --no-edit
+    l = log --graph --pretty=format:'%Cred%h%Creset %C(bold blue)%an%C(reset) - %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+    undo = reset --soft HEAD~1
+    cleanup = "!git remote prune origin && git gc && git clean -df && git stash clear"
+    # clean up all deleted branches
+    forget = "!git fetch -p origin && git branch -vv | awk '/: gone]/{print $1}' | xargs git branch -D"
+
