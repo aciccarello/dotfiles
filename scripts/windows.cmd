@@ -9,5 +9,6 @@ choco install vscode -y
 choco install GoogleChrome -y
 choco install winmerge -y
 
+refreshenv
 git config --global user.name "Anthony Ciccarello"
 git config --global user.email "aciccarello@users.noreply.github.com"

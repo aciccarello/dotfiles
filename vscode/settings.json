@@ -1,101 +1,106 @@
 {
-    "editor.minimap.enabled": false,
-    "editor.fontFamily": "Fira Code, Menlo, Monaco, 'Courier New', monospaceÍ",
-    "editor.fontLigatures": true,
-    "files.autoSave": "onWindowChange",
-    "vim.useSystemClipboard": true,
-    "vim.statusBarColorControl": true,
-    "vim.statusBarColors.normal": [
-        "#8FBCBB",
-        "#434C5E"
-    ],
-    "vim.statusBarColors.insert": "#BF616A",
-    "vim.statusBarColors.visual": "#B48EAD",
-    "vim.statusBarColors.visualline": "#B48EAD",
-    "vim.statusBarColors.visualblock": "#A3BE8C",
-    "vim.statusBarColors.replace": "#D08770",
-    "files.associations": {
-        ".dojorc": "json"
-    },
-    "breadcrumbs.enabled": true,
-    "workbench.colorCustomizations": {
-        "statusBar.background": "#8FBCBB",
-        "statusBar.noFolderBackground": "#8FBCBB",
-        "statusBar.debuggingBackground": "#8FBCBB",
-        "statusBar.foreground": "#434C5E"
-    },
-    "vim.normalModeKeyBindingsNonRecursive": [
-        {
-            "before": [
-                ":wa"
-            ],
-            "commands": [
-                "workbench.action.files.saveAll"
-            ]
-        },
-        {
-            "before": [
-                ":copen"
-            ],
-            "commands": [
-                "workbench.actions.view.problems"
-            ]
-        }
-    ],
-    "vim.disableExtension": false,
-    "html.autoClosingTags": false,
-    "javascript.autoClosingTags": false,
-    "typescript.autoClosingTags": false,
-    "window.zoomLevel": 1,
-    "css.lint.validProperties": [
-        "composes"
-    ],
-    "typescript.updateImportsOnFileMove.enabled": "always",
-    "launch": {
-        "configurations": [
-            {
-                "type": "node",
-                "request": "launch",
-                "name": "Grunt test",
-                "program": "${workspaceFolder}/node_modules/grunt/bin/grunt",
-                "args": [
-                    "test"
-                ]
-            },
-            {
-                "type": "node",
-                "name": "jest tests",
-                "request": "launch",
-                "args": [
-                    "--runInBand"
-                ],
-                "cwd": "${workspaceFolder}",
-                "console": "integratedTerminal",
-                "internalConsoleOptions": "neverOpen",
-                "program": "${workspaceFolder}/node_modules/jest/bin/jest"
-            },
-            {
-                "type": "node",
-                "name": "jest current file",
-                "request": "launch",
-                "args": [
-                    "--runInBand",
-                    "${relativeFile}",
-                    "${fileDirname}/${fileBasenameNoExtension}.spec${fileExtname}"
-                ],
-                "cwd": "${workspaceFolder}",
-                "console": "integratedTerminal",
-                "internalConsoleOptions": "neverOpen",
-                "program": "${workspaceFolder}/node_modules/jest/bin/jest"
-            }
-        ]
-    },
-    "bracketPairColorizer.showHorizontalScopeLine": false,
-    "bracketPairColorizer.colorMode": "Independent",
-    "[typescript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[typescriptreact]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+  "editor.minimap.enabled": false,
+  "editor.fontFamily": "Fira Code, Menlo, Monaco, 'Courier New', monospaceÍ",
+  "editor.fontLigatures": true,
+  "files.autoSave": "onWindowChange",
+  "files.associations": {
+    ".dojorc": "json"
+  },
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+        ":copen"
+      ],
+      "commands": [
+        "workbench.actions.view.problems"
+      ]
     }
+  ],
+  "vim.disableExtension": false,
+  "html.autoClosingTags": false,
+  "javascript.autoClosingTags": false,
+  "typescript.autoClosingTags": false,
+  "window.zoomLevel": 1,
+  "css.lint.validProperties": [
+    "composes"
+  ],
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "launch": {
+    "configurations": [
+      {
+        "type": "node",
+        "request": "launch",
+        "name": "Grunt test",
+        "program": "${workspaceFolder}/node_modules/grunt/bin/grunt",
+        "args": [
+          "test"
+        ]
+      },
+      {
+        "type": "node",
+        "name": "jest tests",
+        "request": "launch",
+        "args": [
+          "--runInBand"
+        ],
+        "cwd": "${workspaceFolder}",
+        "console": "integratedTerminal",
+        "internalConsoleOptions": "neverOpen",
+        "program": "${workspaceFolder}/node_modules/jest/bin/jest"
+      },
+      {
+        "type": "node",
+        "name": "jest current file",
+        "request": "launch",
+        "args": [
+          "--runInBand",
+          "${relativeFile}",
+          "${fileDirname}/${fileBasenameNoExtension}.spec${fileExtname}"
+        ],
+        "cwd": "${workspaceFolder}",
+        "console": "integratedTerminal",
+        "internalConsoleOptions": "neverOpen",
+        "program": "${workspaceFolder}/node_modules/jest/bin/jest"
+      }
+    ]
+  },
+  "bracketPairColorizer.showHorizontalScopeLine": false,
+  "bracketPairColorizer.colorMode": "Independent",
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "javascript.suggest.autoImports": false,
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "sissel.shopify-liquid",
+    "editor.formatOnSave": false
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "cSpell.userWords": [
+    "Bekah",
+    "Bekah's",
+    "Burano",
+    "Ciccarello",
+    "Machu",
+    "Murano",
+    "Ollantaytambo",
+    "Picchu",
+    "Todos",
+    "eleventy",
+    "gelato"
+  ],
+  "grammarly.ignore": [
+    "**/node_modules/**/*",
+    "**"
+  ],
+  "diffEditor.renderSideBySide": false,
+  "workbench.colorTheme": "Default Dark+",
+  "alex.enable": true
 }

@@ -8,6 +8,8 @@
 	smudge = git-lfs smudge -- %f
 [credential]
 	helper = osxkeychain
+[push]
+	default = current
 [diff]
 	tool = vimdiff
 [merge "npm-merge-driver"]
@@ -23,3 +25,5 @@
     # clean up all deleted branches
     forget = "!git fetch -p origin && git branch -vv | awk '/: gone]/{print $1}' | xargs git branch -D"
 
+[core]
+	pager = diff-so-fancy | less --tabs=4 -RFX
