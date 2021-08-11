@@ -2,3 +2,11 @@
 	path = dotbot
 	url = https://github.com/anishathalye/dotbot
 	ignore = all
+[submodule "dotbot-brewfile"]
+	path = dotbot-brewfile
+	url = https://github.com/sobolevn/dotbot-brewfile.git
+	ignore = all
+[submodule "Vundle"]
+	path = vim/bundle/Vundle.vim
+	url = https://github.com/gmarik/Vundle.vim.git
+	ignore = all

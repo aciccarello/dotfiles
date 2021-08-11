@@ -5,6 +5,8 @@ echo 'Configuring macOS...'
 defaults write "Apple Global Domain" "AppleInterfaceStyle" "Dark"
 # Show all files in finder
 defaults write com.apple.finder AppleShowAllFiles YES
+# Finder: allow quitting via ⌘ + Q; doing so will also hide desktop icons
+defaults write com.apple.finder QuitMenuItem -bool true
 # echo "Finder: show all filename extensions"
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 # Automatically hide and show the Dock
@@ -16,7 +18,9 @@ defaults write com.apple.dock mru-spaces -boolean NO
 # Adjust date format
 defaults write com.apple.menuextra.clock DateFormat -string "EEE d MMM h:mm a"
 defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false         # For VS Code
+# Avoid creating .DS_Store files on network or USB volumes
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool TRUE
+defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 # Set a key repeat.
 defaults write NSGlobalDomain KeyRepeat -int 2
 defaults write NSGlobalDomain InitialKeyRepeat -int 35
@@ -40,18 +44,3 @@ defaults write com.apple.Safari IncludeDevelopMenu -bool true
 defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true
 defaults write com.apple.Safari "com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled" -bool true
 defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
-
-###############################################################################
-# Kill affected applications                                                  #
-###############################################################################
-echo 'Restarting apps...'
-
-for app in "Dock" \
-	"Finder" \
-    "SystemUIServer" \
-	"Safari" \
-	"Terminal"; do
-	killall "${app}" &> /dev/null
-done
-# kill -9 $(pgrep Electron) # VS Code
-echo "Done. Note that some of these changes require a logout/restart to take effect."

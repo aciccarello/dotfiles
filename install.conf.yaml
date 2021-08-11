@@ -4,19 +4,33 @@
       create: true
       relink: true
       force: true # Swap the original file
+    shell:
+      stdout: true
+      stderr: true
+      stdin: true
 
 - clean: ['~']
+
+- shell:
+  - ["xcode-select --install || true", "Installing XCode"]
 
 - link:
     ~/.zshrc: zshrc
     ~/.gitconfig: git/.gitconfig
     ~/.vimrc: vim/.vimrc
+    ~/.vim/bundle: vim/bundle
     ~/.editorconfig: .editorconfig
     ~/.config/brewfile/Brewfile: Brewfile
     # VS Code
     ~/Library/Application Support/Code/User/settings.json: vscode/settings.json
     ~/Library/Application Support/Code/User/keybindings.json: vscode/keybindings.json
-    ~/Library/Application Support/Code/User/snippets: vscode/snippets
 
+- brewfile:
+    file: Brewfile
+    stdout: true
+    stderr: true
 
-
+- shell:
+  - ./scripts/shell.sh
+  - ./scripts/npm-global.sh
+  - ./scripts/macos.sh
