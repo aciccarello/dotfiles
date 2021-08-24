@@ -93,14 +93,29 @@
     "Ollantaytambo",
     "Picchu",
     "Todos",
+    "aciccarello",
     "eleventy",
-    "gelato"
+    "gelato",
+    "icache",
+    "unmount"
   ],
   "grammarly.ignore": [
     "**/node_modules/**/*",
     "**"
   ],
+  "alex.enable": true,
+  "editor.folding": false,
+  "editor.autoClosingBrackets": "never",
+  "editor.autoClosingQuotes": "never",
+  "zenMode.hideLineNumbers": false,
+  "zenMode.centerLayout": false,
+  "emmet.showExpandedAbbreviation": "inMarkupAndStylesheetFilesOnly",
+  "terminal.integrated.scrollback": 2000,
   "diffEditor.renderSideBySide": false,
-  "workbench.colorTheme": "Default Dark+",
-  "alex.enable": true
+  "javascript.preferences.useAliasesForRenames": false,
+  "typescript.preferences.useAliasesForRenames": false,
+  "quokka.startViewStatusBar": false,
+  "quokka.showOutputOnStart": false,
+  "editor.acceptSuggestionOnCommitCharacter": false,
+  "editor.suggest.localityBonus": true
 }

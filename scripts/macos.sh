@@ -4,7 +4,7 @@ echo 'Configuring macOS...'
 
 defaults write "Apple Global Domain" "AppleInterfaceStyle" "Dark"
 # Show all files in finder
-defaults write com.apple.finder AppleShowAllFiles YES
+defaults write com.apple.finder AppleShowAllFiles true
 # echo "Finder: show all filename extensions"
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 # Automatically hide and show the Dock
@@ -33,6 +33,8 @@ defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 defaults write NSGlobalDomain AppleFontSmoothing -int 2
 # See https://github.com/Microsoft/vscode/issues/51132#issuecomment-424299892
 defaults write -g CGFontRenderingFontSmoothingDisabled -bool NO
+# See https://tonsky.me/blog/monitors/#turn-off-font-smoothing
+defaults -currentHost write -g AppleFontSmoothing -int 0
 
 # Set up Safari for development.
 defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
