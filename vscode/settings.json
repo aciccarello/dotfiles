@@ -1,29 +1,23 @@
 {
   "editor.minimap.enabled": false,
-  "editor.fontFamily": "Fira Code, Menlo, Monaco, 'Courier New', monospaceÍ",
+  "editor.fontFamily": "Fira Code, Menlo, Monaco, 'Courier New', monospace",
   "editor.fontLigatures": true,
   "files.autoSave": "onWindowChange",
   "files.associations": {
-    ".dojorc": "json"
+    ".dojorc": "json",
+    ".cook.md": "cook"
   },
   "vim.normalModeKeyBindingsNonRecursive": [
     {
-      "before": [
-        ":copen"
-      ],
-      "commands": [
-        "workbench.actions.view.problems"
-      ]
+      "before": [":copen"],
+      "commands": ["workbench.actions.view.problems"]
     }
   ],
   "vim.disableExtension": false,
   "html.autoClosingTags": false,
   "javascript.autoClosingTags": false,
   "typescript.autoClosingTags": false,
-  "window.zoomLevel": 1,
-  "css.lint.validProperties": [
-    "composes"
-  ],
+  "css.lint.validProperties": ["composes"],
   "typescript.updateImportsOnFileMove.enabled": "always",
   "launch": {
     "configurations": [
@@ -32,17 +26,13 @@
         "request": "launch",
         "name": "Grunt test",
         "program": "${workspaceFolder}/node_modules/grunt/bin/grunt",
-        "args": [
-          "test"
-        ]
+        "args": ["test"]
       },
       {
         "type": "node",
         "name": "jest tests",
         "request": "launch",
-        "args": [
-          "--runInBand"
-        ],
+        "args": ["--runInBand"],
         "cwd": "${workspaceFolder}",
         "console": "integratedTerminal",
         "internalConsoleOptions": "neverOpen",
@@ -66,58 +56,74 @@
   },
   "bracketPairColorizer.showHorizontalScopeLine": false,
   "bracketPairColorizer.colorMode": "Independent",
-  "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
   "javascript.suggest.autoImports": false,
-  "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
   "[html]": {
     "editor.defaultFormatter": "sissel.shopify-liquid",
     "editor.formatOnSave": false
   },
-  "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
   "cSpell.userWords": [
+    "aciccarello",
     "Bekah",
     "Bekah's",
     "Burano",
     "Ciccarello",
+    "eleventy",
+    "gelato",
+    "icache",
     "Machu",
     "Murano",
     "Ollantaytambo",
     "Picchu",
+    "supabase",
     "Todos",
-    "aciccarello",
-    "eleventy",
-    "gelato",
-    "icache",
     "unmount"
   ],
-  "grammarly.ignore": [
-    "**/node_modules/**/*",
-    "**"
-  ],
+  "grammarly.ignore": ["**/node_modules/**/*", "**"],
   "alex.enable": true,
-  "editor.folding": false,
+  "alex.allow": ["aunt-uncle", "aunts-uncles"],
   "editor.autoClosingBrackets": "never",
   "editor.autoClosingQuotes": "never",
   "zenMode.hideLineNumbers": false,
   "zenMode.centerLayout": false,
-  "emmet.showExpandedAbbreviation": "inMarkupAndStylesheetFilesOnly",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  // "emmet.showExpandedAbbreviation": "inMarkupAndStylesheetFilesOnly",
+  // "emmet.showSuggestionsAsSnippets": true,
   "terminal.integrated.scrollback": 2000,
   "terminal.integrated.defaultProfile.osx": "zsh",
-  "diffEditor.renderSideBySide": false,
-  "workbench.colorTheme": "Default Dark+",
+  "editor.formatOnSave": true,
   "javascript.preferences.useAliasesForRenames": false,
   "typescript.preferences.useAliasesForRenames": false,
   "quokka.startViewStatusBar": false,
   "quokka.showOutputOnStart": false,
   "editor.acceptSuggestionOnCommitCharacter": false,
-  "editor.suggest.localityBonus": true
+  "editor.suggest.localityBonus": true,
+  "terminal.integrated.tabs.enabled": false,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": true,
+  "window.zoomLevel": 1,
+  "github-enterprise.uri": "https://github.intuit.com",
+  "files.trimFinalNewlines": true,
+  "window.autoDetectColorScheme": true,
+  "githubPullRequests.pullBranch": "never",
+  "[toml]": {
+    "editor.tabSize": 2
+  },
+  "evenBetterToml.formatter.indentEntries": true,
+  "evenBetterToml.formatter.indentTables": true,
+  "evenBetterToml.formatter.compactEntries": false,
+  "vscode-pets.petType": "chicken",
+  "vscode-pets.theme": "beach",
+  "vscode-pets.throwBallWithMouse": true,
+  "githubPullRequests.terminalLinksHandler": "github",
+  "diffEditor.renderSideBySide": false,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "emmet.excludeLanguages": [],
+  "emmet.includeLanguages": {
+    "nunjucks": "html"
+  },
+  "[typescript]": {},
+  "[nunjucks]": {
+    "editor.defaultFormatter": "okitavera.vscode-nunjucks-formatter"
+  },
+  "workbench.colorTheme": "Default Light+"
 }
