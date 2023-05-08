@@ -8,11 +8,15 @@
       stdout: true
       stderr: true
       stdin: true
+    brewfile:
+      stdout: true
+      stderr: true
+      include: ["tap", "brew", "cask", "mas"]
 
-- clean: ['~']
+- clean: ["~"]
 
 - shell:
-  - ["xcode-select --install || true", "Installing XCode"]
+    - ["xcode-select --install || true", "Installing XCode"]
 
 - link:
     ~/.zshrc: zshrc
@@ -27,10 +31,8 @@
 
 - brewfile:
     file: Brewfile
-    stdout: true
-    stderr: true
 
 - shell:
-  - ./scripts/shell.sh
-  - ./scripts/npm-global.sh
-  - ./scripts/macos.sh
+    - ./scripts/shell.sh
+    - ./scripts/npm-global.sh
+    - ./scripts/macos.sh
