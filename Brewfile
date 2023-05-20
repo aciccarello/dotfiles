@@ -3,9 +3,14 @@ tap "homebrew/cask"
 tap "homebrew/cask-fonts"
 tap "homebrew/cask-versions"
 tap "homebrew/core"
+tap "homebrew/services"
+tap "mongodb/brew"
+tap "rcmdnk/file"
 tap "samuelmeuli/tap" # for excluding from Time Machine
+brew "dark-mode" # CLI to toggle dark mode
 brew "deno"
 brew "diff-so-fancy"
+brew "docker-compose", link: false
 brew "exiftool"
 brew "git"
 brew "gradle"
@@ -13,18 +18,24 @@ brew "grep"
 brew "ldns"
 brew "libfido2"
 brew "mas"
+brew "mongosh"
 brew "mysql"
 brew "node"
 brew "nvm"
 brew "openssh"
-brew "openssl"
-brew "python@3.8"
+brew "openssl@3"
+brew "pyenv"
+brew "python@2", link: false
+brew "python@3.10"
 brew "ruby"
 brew "vim"
 brew "webp"
 brew "yarn"
 brew "zsh"
 brew "zsh-completions"
+# brew "mongodb/brew/mongodb-community"
+# cask "android-platform-tools"
+cask "docker"
 cask "firefox-developer-edition"
 cask "flycut"
 cask "font-fira-code"
@@ -34,11 +45,11 @@ cask "obsidian"
 cask "rectangle"
 cask "rescuetime"
 cask "slack"
-cask "virtualbox"
+cask "vlc"
 cask "vnc-viewer"
 mas "Brother iPrint&Scan", id: 1193539993
-mas "GarageBand", id: 682658836
-mas "iMovie", id: 408981434
-mas "Numbers", id: 409203825
-mas "Photos Duplicate Cleaner", id: 592704001
+# mas "GarageBand", id: 682658836
+# mas "iMovie", id: 408981434
+# mas "Numbers", id: 409203825
+# mas "Photos Duplicate Cleaner", id: 592704001
 mas "Speedtest", id: 1153157709
