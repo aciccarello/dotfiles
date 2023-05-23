@@ -1,6 +1,6 @@
 [user]
 	name = Anthony Ciccarello
-	email = aciccarello@sitepen.com
+	email = aciccarello@users.noreply.github.com
 [filter "lfs"]
 	process = git-lfs filter-process
 	required = true

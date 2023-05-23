@@ -36,3 +36,4 @@
     - ./scripts/shell.sh
     - ./scripts/npm-global.sh
     - ./scripts/macos.sh
+    - ./scripts/install-vscode-extensions.sh

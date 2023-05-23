@@ -124,6 +124,5 @@
   "[typescript]": {},
   "[nunjucks]": {
     "editor.defaultFormatter": "okitavera.vscode-nunjucks-formatter"
-  },
-  "workbench.colorTheme": "Default Light+"
+  }
 }
