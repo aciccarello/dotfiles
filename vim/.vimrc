@@ -25,4 +25,6 @@ filetype plugin indent on
 
 syntax on
 set number
+set smartcase
+
 " autocmd FileType typescript setlocal commentstring=\\\\\ %s
