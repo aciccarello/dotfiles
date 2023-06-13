@@ -22,6 +22,7 @@
     ~/.zshrc: zshrc
     ~/.gitconfig: git/.gitconfig
     ~/.vimrc: vim/.vimrc
+    ~/.ideavimrc: vim/.ideavimrc
     ~/.vim/bundle: vim/bundle
     ~/.editorconfig: .editorconfig
     ~/.config/brewfile/Brewfile: Brewfile

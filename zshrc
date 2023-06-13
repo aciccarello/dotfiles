@@ -65,6 +65,7 @@ plugins=(
   gitfast
   npm
   nvm
+  grails
 )
 
 zstyle ':omz:plugins:nvm' autoload yes
@@ -110,3 +111,35 @@ export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
 export PATH="/Users/aciccarello/.detaspace/bin:$PATH"
+
+export CODE_DIR=$HOME/code
+
+# ICD
+export GRAILS_HOME=$HOME/.sdkman/candidates/grails/3.3.15
+export GRADLE_TEST_MAX_FORKS=true
+export GRADLE_TEST_FORK=true
+alias create-configs="pushd $CODE_DIR/deployer; ./gradlew -Dtargets=admin,2gP -Denvironments=anthony local; popd"
+alias delete-configs="rm -vf $HOME/.grails/admin-config.groovy $HOME/.grails/2gP-config.groovy"
+alias stash-configs="mv -vf $HOME/.grails/admin-config.groovy $HOME/.grails/admin-config.groovy.stash; mv -vf $HOME/.grails/2gP-config.groovy $HOME/.grails/2gP-config.groovy.stash"
+alias pop-configs="mv -vf $HOME/.grails/admin-config.groovy.stash $HOME/.grails/admin-config.groovy; mv -vf $HOME/.grails/2gP-config.groovy.stash $HOME/.grails/2gP-config.groovy"
+alias idea='open -na "IntelliJ IDEA.app" --args "$@"'
+sel() {
+	# Run selenium tests
+    if [ $# -eq 0 ]
+    then # run with no args to see argument order
+        echo "sel <tag> [<user> <restore> <headless> <debug>]"
+        return 1
+    fi
+    user=${2:-aciccarello} # set default username
+    restore=${3:-false}
+    headless=${4:-true}
+    debug=${5:-false}
+    [[ $restore == "false" ]] && res="-xrestoredata" || res=""
+    echo "./gradlew runCukes -Dheadless=$headless -Puser=$user -Pthreaded $res -DcleanFtpFiles=yes -DcleanEmails=yes -Ptags=$1 -Pdebug=$debug"
+    (cd $CODE_DIR/selenium3 && ./gradlew runCukes -Dheadless=$headless -Puser=$user -Pthreaded $res -DcleanFtpFiles=yes -DcleanEmails=yes -Ptags=$1 -Pdebug=$debug)
+	print -f '\a' # for noise
+}
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
