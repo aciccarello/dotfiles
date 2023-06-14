@@ -48,6 +48,6 @@ defaults write com.apple.Safari "com.apple.Safari.ContentPageGroupIdentifier.Web
 defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 
 echo "Opening Firefox to set as default browser. Feel free to close or login"
-/Applications/Firefox\ Developer\ Edition.app/Contents/MacOS/firefox -setDefaultBrowser -preferences
+/Applications/Firefox\ Developer\ Edition.app/Contents/MacOS/firefox -set DefaultBrowser -preferences &
 
 echo "Done. Note that some of these changes require a logout/restart to take effect."

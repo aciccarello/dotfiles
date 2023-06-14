@@ -17,6 +17,10 @@
 
 - shell:
     - ["xcode-select --install || true", "Installing XCode"]
+    - [
+        'command -v brew >/dev/null 2>&1 || {/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"}',
+        "Installing brew if not found",
+      ]
 
 - link:
     ~/.zshrc: zshrc
