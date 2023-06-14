@@ -12,6 +12,8 @@ Managed via [Dotbot](https://github.com/anishathalye/dotbot/)
 ./install
 ```
 
+Note: If brew is not previously installed, you will need to follow the additional instructions from brew before re-running.
+
 ## Manual Config
 
 ### Modifier Keys
