@@ -71,6 +71,9 @@
     "gelato",
     "icache",
     "Machu",
+    "Metaformats",
+    "Microformat",
+    "microformats",
     "Murano",
     "Ollantaytambo",
     "Picchu",
@@ -121,8 +124,12 @@
   "emmet.includeLanguages": {
     "nunjucks": "html"
   },
-  "[typescript]": {},
+  "[typescript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
   "[nunjucks]": {
     "editor.defaultFormatter": "okitavera.vscode-nunjucks-formatter"
-  }
+  },
+  "editor.formatOnSaveMode": "modificationsIfAvailable",
+  "debug.javascript.autoAttachFilter": "onlyWithFlag"
 }
