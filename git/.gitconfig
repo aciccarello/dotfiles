@@ -8,6 +8,12 @@
 	smudge = git-lfs smudge -- %f
 [credential]
 	helper = osxkeychain
+[pull]
+	rebase = true
+[rebase]
+	autostash = true
+[merge]
+	autostash = true
 [push]
 	default = current
 [diff]
@@ -15,8 +21,6 @@
 [merge "npm-merge-driver"]
 	name = automatically merge npm lockfiles
 	driver = npx npm-merge-driver merge %A %O %B %P
-[includeIf "gitdir:~/Documents/code/intuit/"]
-	path = ~/Documents/code/intuit/.gitconfig-intuit
 [alias]
     s = status --short
     br = branch -v
