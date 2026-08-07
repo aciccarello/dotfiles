@@ -36,6 +36,7 @@
 [core]
 	pager = diff-so-fancy | less --tabs=4 -RFX
 	autocrlf = input
+	excludesfile = ~/.config/git/ignore
 [init]
 	defaultBranch = main
 [credential "https://github.com"]

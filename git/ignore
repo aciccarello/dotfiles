@@ -1,0 +1,35 @@
+# Global ignore rules for this machine
+
+# macOS metadata
+
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows metadata
+
+Thumbs.db
+Desktop.ini
+
+# Programming Envs
+
+node_modules
+npm-debug.log\*
+.venv
+.cache
+.netlify
+.gradle
+.deno
+
+# Editor files
+
+.vscode
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/\*.code-snippets
+.idea
+_.swp
+_.swo
+Session.vim

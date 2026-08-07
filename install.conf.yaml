@@ -22,6 +22,7 @@
 - link:
     ~/.zshrc: zshrc
     ~/.gitconfig: git/.gitconfig
+    ~/.config/git/ignore: git/ignore
     ~/.vimrc: vim/.vimrc
     ~/.vim/bundle: vim/bundle
     ~/.editorconfig: .editorconfig
