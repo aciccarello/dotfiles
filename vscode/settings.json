@@ -5,13 +5,13 @@
   "files.autoSave": "onWindowChange",
   "files.associations": {
     ".dojorc": "json",
-    ".cook.md": "cook"
+    ".cook.md": "cook",
   },
   "vim.normalModeKeyBindingsNonRecursive": [
     {
       "before": [":copen"],
-      "commands": ["workbench.actions.view.problems"]
-    }
+      "commands": ["workbench.actions.view.problems"],
+    },
   ],
   "vim.disableExtension": false,
   "html.autoClosingTags": false,
@@ -26,7 +26,7 @@
         "request": "launch",
         "name": "Grunt test",
         "program": "${workspaceFolder}/node_modules/grunt/bin/grunt",
-        "args": ["test"]
+        "args": ["test"],
       },
       {
         "type": "node",
@@ -36,7 +36,7 @@
         "cwd": "${workspaceFolder}",
         "console": "integratedTerminal",
         "internalConsoleOptions": "neverOpen",
-        "program": "${workspaceFolder}/node_modules/jest/bin/jest"
+        "program": "${workspaceFolder}/node_modules/jest/bin/jest",
       },
       {
         "type": "node",
@@ -45,21 +45,34 @@
         "args": [
           "--runInBand",
           "${relativeFile}",
-          "${fileDirname}/${fileBasenameNoExtension}.spec${fileExtname}"
+          "${fileDirname}/${fileBasenameNoExtension}.spec${fileExtname}",
         ],
         "cwd": "${workspaceFolder}",
         "console": "integratedTerminal",
         "internalConsoleOptions": "neverOpen",
-        "program": "${workspaceFolder}/node_modules/jest/bin/jest"
-      }
-    ]
+        "program": "${workspaceFolder}/node_modules/jest/bin/jest",
+      },
+      {
+        "type": "node",
+        "name": "vitest current file",
+        "request": "launch",
+        "args": [
+          "${relativeFile}",
+          "${fileDirname}/${fileBasenameNoExtension}.spec${fileExtname}",
+        ],
+        "cwd": "${workspaceFolder}",
+        "console": "integratedTerminal",
+        "internalConsoleOptions": "neverOpen",
+        "program": "${workspaceFolder}/node_modules/vitest/vitest.mjs",
+      },
+    ],
   },
   "bracketPairColorizer.showHorizontalScopeLine": false,
   "bracketPairColorizer.colorMode": "Independent",
   "javascript.suggest.autoImports": false,
   "[html]": {
     "editor.defaultFormatter": "sissel.shopify-liquid",
-    "editor.formatOnSave": false
+    "editor.formatOnSave": false,
   },
   "cSpell.userWords": [
     "aciccarello",
@@ -74,12 +87,15 @@
     "Metaformats",
     "Microformat",
     "microformats",
+    "micropub",
     "Murano",
     "Ollantaytambo",
+    "Omnibear",
     "Picchu",
     "supabase",
     "Todos",
-    "unmount"
+    "unmount",
+    "webmention",
   ],
   "grammarly.ignore": ["**/node_modules/**/*", "**"],
   "alex.enable": true,
@@ -109,7 +125,7 @@
   "window.autoDetectColorScheme": true,
   "githubPullRequests.pullBranch": "never",
   "[toml]": {
-    "editor.tabSize": 2
+    "editor.tabSize": 2,
   },
   "evenBetterToml.formatter.indentEntries": true,
   "evenBetterToml.formatter.indentTables": true,
@@ -122,14 +138,21 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "emmet.excludeLanguages": [],
   "emmet.includeLanguages": {
-    "nunjucks": "html"
+    "nunjucks": "html",
   },
   "[typescript]": {
-    "editor.defaultFormatter": "vscode.typescript-language-features"
+    "editor.defaultFormatter": "vscode.typescript-language-features",
   },
   "[nunjucks]": {
-    "editor.defaultFormatter": "okitavera.vscode-nunjucks-formatter"
+    "editor.defaultFormatter": "okitavera.vscode-nunjucks-formatter",
   },
   "editor.formatOnSaveMode": "modificationsIfAvailable",
-  "debug.javascript.autoAttachFilter": "onlyWithFlag"
+  "debug.javascript.autoAttachFilter": "onlyWithFlag",
+  "workbench.colorTheme": "Light Modern",
+  "editor.multiCursorModifier": "ctrlCmd",
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "git.openRepositoryInParentFolders": "always",
+  "markdownlint.config": {
+    "MD041": false,
+  },
 }

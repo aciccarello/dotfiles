@@ -60,7 +60,7 @@ To upgrade your submodules to their latest versions, you could periodically run 
 
 Use the [brew bundle](https://docs.brew.sh/Manpage#bundle-subcommand) commands to manage brew installations.
 
-- `brew bundle dump --force` - Updates `Brewfile` with all your dependencies, casks, taps and even services
+- `brew bundle dump --force` - Updates `Brewfile` with dependencies, casks, taps, MAS apps, and VS Code extensions
 - `brew bundle [install]` - Install all Brewfile dependencies. Automatically run on `./install`
 
 Since brew autogenerates the file, review the file and re-add comments before committing.
@@ -71,14 +71,6 @@ To allow running a script, use the following `chmod` commmand with the path to t
 
 ```bash
 chmod +x ./path-to-script.sh
-```
-
-## Updating vscode extension list
-
-Currently, the vscode extension list is not automatically updated. To update the `extensions.txt` file run the following command
-
-```bash
-code --list-extensions > ~/.dotfiles/vscode/extensions.txt
 ```
 
 ## Finding defaults from menus

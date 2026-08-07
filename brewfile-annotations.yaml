@@ -1,0 +1,66 @@
+---
+settings:
+  optional_behavior: comment_out
+  append_missing_optional_or_excluded: true
+  normalize_vscode_ids: true
+entries:
+  tap "samuelmeuli/tap":
+    comment: for excluding from Time Machine
+  brew "pycparser":
+    excluded: true
+  brew "cffi":
+    excluded: true
+  brew "deno":
+    optional: true
+  brew "diff-so-fancy":
+    comment: Used in my git config
+  brew "git-lfs":
+    optional: true
+  brew "gradle":
+    optional: true
+  brew "hugo":
+    comment: Used by denver's site
+    optional: true
+  brew "ldns":
+    excluded: true
+  brew "libfido2":
+    excluded: true
+  brew "poetry":
+    excluded: true
+  brew "perl":
+    excluded: true
+  brew "yq":
+    comment: required by scripts/brewfile-refresh.sh annotation workflow
+  cask "android-platform-tools":
+    optional: true
+  cask "antigravity":
+    optional: true
+  cask "codex":
+    optional: true
+  cask "displaylink":
+    comment: DisplayLink driver for USB hub
+  cask "docker":
+    optional: true
+  cask "gimp":
+    optional: true
+  cask "obsidian":
+    optional: true
+  cask "postman":
+  cask "rectangle":
+  cask "slack":
+  cask "spacewalker":
+    optional: true
+  cask "vlc":
+  cask "virtualbox":
+  cask "visual-studio-code":
+  cask "vnc-viewer":
+  'mas "Brother iPrint&Scan", id: 1193539993':
+  'mas "GarageBand", id: 682658836':
+    optional: true
+  'mas "iMovie", id: 408981434':
+    optional: true
+  'mas "Numbers", id: 409203825':
+    optional: true
+  'mas "Photos Duplicate Cleaner", id: 592704001':
+    optional: true
+  'mas "Speedtest", id: 1153157709':
