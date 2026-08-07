@@ -103,10 +103,13 @@ source $ZSH/oh-my-zsh.sh
 export PATH="$HOME/.poetry/bin:$PATH"
 
 # bun completions
-[ -s "/Users/aciccarello/.bun/_bun" ] && source "/Users/aciccarello/.bun/_bun"
+[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
 
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
-export PATH="/Users/aciccarello/.detaspace/bin:$PATH"
+# Added by Antigravity
+if [ -d "$HOME/.antigravity/antigravity/bin" ]; then
+  export PATH="$HOME/.antigravity/antigravity/bin:$PATH"
+fi

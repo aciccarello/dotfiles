@@ -14,6 +14,14 @@ Managed via [Dotbot](https://github.com/anishathalye/dotbot/)
 
 Note: If brew is not previously installed, you will need to follow the additional instructions from brew before re-running.
 
+## Preflight
+
+Before running `./install`, confirm:
+
+- macOS with internet access (bootstrap scripts download installers).
+- Xcode Command Line Tools can be installed (`xcode-select --install`).
+- `curl` is available (used by Homebrew and oh-my-zsh installers).
+
 ## Manual Config
 
 ### Modifier Keys
@@ -64,6 +72,41 @@ Use the [brew bundle](https://docs.brew.sh/Manpage#bundle-subcommand) commands t
 - `brew bundle [install]` - Install all Brewfile dependencies. Automatically run on `./install`
 
 Since brew autogenerates the file, review the file and re-add comments before committing.
+
+### Brewfile Refresh Workflow
+
+Use the local refresh script to keep `Brewfile` aligned with your machine and annotation rules:
+
+```bash
+./scripts/brewfile-refresh.sh
+git --no-pager diff -- Brewfile
+```
+
+The script:
+
+- Exports current packages from Homebrew Bundle.
+- Applies `brewfile-annotations.yaml` (`optional`, `excluded`, and comments).
+- Writes changes directly to `Brewfile`.
+
+Bootstrap note:
+
+- `scripts/brew-install.sh` installs Homebrew from the official installer URL.
+- `scripts/shell.sh` installs oh-my-zsh from the official installer URL.
+
+## Maintenance
+
+Regularly:
+
+1. `brew update`
+2. `brew bundle check --file Brewfile`
+3. `./scripts/brewfile-refresh.sh`
+4. Review `git --no-pager diff -- Brewfile`
+
+Infrequently:
+
+1. `brew outdated`
+2. `git submodule update --init --recursive`
+3. Optionally update submodules in a dedicated branch with `git submodule update --remote --recursive`
 
 ## Modifying script permissions
 
