@@ -99,14 +99,31 @@ Regularly:
 
 1. `brew update`
 2. `brew bundle check --file Brewfile`
-3. `./scripts/brewfile-refresh.sh`
-4. Review `git --no-pager diff -- Brewfile`
+3. `./scripts/validate.sh`
+4. `./scripts/brewfile-refresh.sh`
+5. Review `git --no-pager diff -- Brewfile`
 
 Infrequently:
 
 1. `brew outdated`
 2. `git submodule update --init --recursive`
 3. Optionally update submodules in a dedicated branch with `git submodule update --remote --recursive`
+
+## Local validation
+
+Run all local checks with one command:
+
+```bash
+./scripts/validate.sh
+```
+
+This validates:
+
+- `install.conf.yaml` YAML parse
+- JSONC syntax for VS Code config files and JSON syntax for Rectangle config
+- shell syntax for `install` and `scripts/*.sh`
+- Dotbot dry-run
+- `brew bundle check --file Brewfile`
 
 ## Modifying script permissions
 
