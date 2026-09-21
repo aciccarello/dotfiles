@@ -23,13 +23,21 @@ npm-debug.log\*
 
 # Editor files
 
+.worktrees # common git worktree folder
+
 .vscode
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
-!.vscode/\*.code-snippets
+# The following might want to be enable on a per-repo basis
+# !.vscode/settings.json
+# !.vscode/tasks.json
+# !.vscode/launch.json
+# !.vscode/extensions.json
+# !.vscode/\*.code-snippets
 .idea
 _.swp
 _.swo
 Session.vim
+
+# AI Files
+docs/superpowers
+.superpowers
+.codegraph

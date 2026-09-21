@@ -83,6 +83,7 @@
     "eleventy",
     "gelato",
     "icache",
+"Indiekit",
     "Machu",
     "Metaformats",
     "Microformat",
@@ -120,8 +121,7 @@
   "editor.bracketPairColorization.enabled": true,
   "editor.guides.bracketPairs": true,
   "window.zoomLevel": 1,
-  "github-enterprise.uri": "https://github.intuit.com",
-  "files.trimFinalNewlines": true,
+    "files.trimFinalNewlines": true,
   "window.autoDetectColorScheme": true,
   "githubPullRequests.pullBranch": "never",
   "[toml]": {
@@ -152,6 +152,7 @@
   "editor.multiCursorModifier": "ctrlCmd",
   "github.copilot.nextEditSuggestions.enabled": true,
   "git.openRepositoryInParentFolders": "always",
+"git.worktreeIncludeFiles": [".env", "node_modules/**"],
   "markdownlint.config": {
     "MD041": false,
   },

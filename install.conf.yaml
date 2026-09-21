@@ -30,6 +30,9 @@
     # VS Code
     ~/Library/Application Support/Code/User/settings.json: vscode/settings.json
     ~/Library/Application Support/Code/User/keybindings.json: vscode/keybindings.json
+    # AI
+    ~/AGENTS.md: AGENTS.md
+    ~/.config/opencode/opencode.jsonc: opencode.jsonc
 
 - brewfile:
     file: Brewfile
@@ -38,3 +41,4 @@
     - ./scripts/shell.sh
     - ./scripts/npm-global.sh
     - ./scripts/macos.sh
+    - ["mkdir -p ~/.agents/skills", "Creating ~/.agents/skills directory"]
